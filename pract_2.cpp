@@ -68,15 +68,15 @@ int main() {
             case'^':
                 std::cout<<"Введите число для возведения \n";
                 std::cin>>first_num;
-                if(first_num<0){
-                    std::cout<<"В отрицательную степень не выйдет\n";
-                    break;
-                }
                 std::cout<<first_num*first_num;
                 break;
             case'@':
                 std::cout<<"Введите число для корня \n";
                 std::cin>>first_num;
+                if(first_num<0){
+                    std::cout<<"Не получится ай ай ай";
+                    break;
+                }
                 result = sqrt(first_num);
                 std::cout<<result;
                 break;
@@ -85,6 +85,10 @@ int main() {
                 std::cin>>first_num;
                 std::cout<<"Степень в которую надо возвести \n"; 
                 std::cin>>sec_num;
+                if(sec_num<0){
+                    std::cout<<"В отрицательную степень не выйдет\n";
+                    break;
+                }
                 result = 1;
                 for (int i = 0; i < sec_num; i++){
                     result *= first_num;
