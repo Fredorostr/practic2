@@ -8,8 +8,8 @@ int main() {
     char operation;
     double result;
     long long factorial;
-    std::string ask;
-    std::cout<<"Вас приветствует калькулятор !\n ";
+    string ask;
+    cout<<"Вас приветствует калькулятор !\n ";
 
     while(true){
         cout<<"если хотите выйти то введите exit(если нет то просто введите no) \n";
@@ -110,7 +110,7 @@ int main() {
                 cout<<factorial;
             break;
         }  
-    cout<<"Хотите сделать что то ещё ? введите да или нет";
+    cout<<"Хотите сделать что то ещё ? введите да или нет\n";
     cin>>ask;
     if( ask == "нет"){
             return 0;
