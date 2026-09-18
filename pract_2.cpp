@@ -12,17 +12,19 @@ int main() {
     std::cout<<"Вас приветсвует калькулятор !\n ";
 
     while(true){
+        std::cout<<"если хотите выйти то введите exit(если нет то просто введите no) \n";
+            std::cin>>exit;
+        if ( exit == "exit") {
+                return 0;
+            }
         while(true){ 
             std::cout<<"Введите операцию из следующего списка \n '*' = умножение \n '/' = деление \n '+' = сложение \n '-' = вычитание \n '%' = 1 процент \n '^' = возвести в квадрат \n '@' = найти корень \n ':' = возвести в степень любую \n '!' = найти факториал \n если не хотите что либо делать то введите no \n";
             std::cin>>operation;
-            std::cout<<"если хотите выйти то введите exit(если нет то просто введите no) \n";
-            std::cin>>exit;
+            
             if (operation == '*' || operation == '/' || operation == '+' || operation == '-' || operation == '%' || operation == '^' || operation == '@' || operation == ':' || operation == '!') {
                 break;
             }
-            if ( exit == "exit") {
-                return 0;
-            }
+        
         }
         switch (operation) {
             case '*':
@@ -51,6 +53,7 @@ int main() {
                 std::cin>>first_num;
                 std::cout<<"Введите второе число \n"; 
                 std::cin>>sec_num;
+                std::cout<<first_num-sec_num;
                 break;
             case'%':
                 std::cout<<"Число процент которого нужно найти \n";
