@@ -39,13 +39,15 @@ int main() {
                 std::cin>>first_num;
                 std::cout<<"введите делитель \n"; 
                 std::cin>>sec_num;
-                std::cout<<first_num/sec_num;
-                if(sec_num == 0){
+                if(first_num == 0){
                     std::cout<<"На ноль нельзя ай ай ай\n";
+                    break;
                 }
                 if(sec_num == 0){
                     std::cout<<"Ноль нельзя ай ай ай\n";
+                    break;
                 }
+                std::cout<<first_num/sec_num;
                 break;
             case'+':
                 std::cout<<"Введите первое число \n";
@@ -67,6 +69,7 @@ int main() {
                 std::cout<<"Введите сколько процентов нужно найти \n"; 
                 std::cin>>sec_num;
                 std::cout<<(first_num / sec_num)*100;
+                break;
             case'^':
                 std::cout<<"Введите число для возведения \n";
                 std::cin>>first_num;
@@ -91,6 +94,10 @@ int main() {
             case'!':
                 std::cout<<"Введите число для нахождения факториала \n";
                 std::cin>>first_num;
+                if(factorial < 0){
+                    std::cout<<"Не найдёшь из отрицательного\n";
+                    break;
+                }
                 factorial = 1;
                 for ( int i = 1; i <= first_num; i++){
                     factorial *= i;
