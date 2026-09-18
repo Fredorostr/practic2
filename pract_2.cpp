@@ -40,6 +40,12 @@ int main() {
                 std::cout<<"введите делитель \n"; 
                 std::cin>>sec_num;
                 std::cout<<first_num/sec_num;
+                if(sec_num == 0){
+                    std::cout<<"На ноль нельзя ай ай ай\n";
+                }
+                if(sec_num == 0){
+                    std::cout<<"Ноль нельзя ай ай ай\n";
+                }
                 break;
             case'+':
                 std::cout<<"Введите первое число \n";
@@ -58,8 +64,9 @@ int main() {
             case'%':
                 std::cout<<"Число процент которого нужно найти \n";
                 std::cin>>first_num;
-                std::cout<<first_num/100;
-                break;
+                std::cout<<"Введите сколько процентов нужно найти \n"; 
+                std::cin>>sec_num;
+                std::cout<<(first_num / sec_num)*100;
             case'^':
                 std::cout<<"Введите число для возведения \n";
                 std::cin>>first_num;
