@@ -6,19 +6,18 @@ int main() {
     double sec_num;
     char operation;
     double result;
-    std::string exit;
     long long factorial;
     std::string ask;
-    std::cout<<"Вас приветсвует калькулятор !\n ";
+    std::cout<<"Вас приветствует калькулятор !\n ";
 
     while(true){
         std::cout<<"если хотите выйти то введите exit(если нет то просто введите no) \n";
-            std::cin>>exit;
-        if ( exit == "exit") {
+            std::cin>>ask;
+        if ( ask == "exit") {
                 return 0;
             }
         while(true){ 
-            std::cout<<"Введите операцию из следующего списка \n '*' = умножение \n '/' = деление \n '+' = сложение \n '-' = вычитание \n '%' = 1 процент \n '^' = возвести в квадрат \n '@' = найти корень \n ':' = возвести в степень любую \n '!' = найти факториал \n если не хотите что либо делать то введите no \n";
+            std::cout<<"Введите операцию из следующего списка \n '*' = умножение \n '/' = деление \n '+' = сложение \n '-' = вычитание \n '%' = найти процент \n '^' = возвести в квадрат \n '@' = найти корень \n ':' = возвести в степень любую \n '!' = найти факториал \n если не хотите что либо делать то введите no \n";
             std::cin>>operation;
             
             if (operation == '*' || operation == '/' || operation == '+' || operation == '-' || operation == '%' || operation == '^' || operation == '@' || operation == ':' || operation == '!') {
@@ -69,6 +68,10 @@ int main() {
             case'^':
                 std::cout<<"Введите число для возведения \n";
                 std::cin>>first_num;
+                if(first_num<0){
+                    std::cout<<"В отрицательную степень не выйдет\n";
+                    break;
+                }
                 std::cout<<first_num*first_num;
                 break;
             case'@':
@@ -103,8 +106,8 @@ int main() {
             break;
         }  
     std::cout<<"Хотите сделать что то ещё ? введите да или нет";
-    std::cin>>exit;
-    if( exit == "нет"){
+    std::cin>>ask;
+    if( ask == "нет"){
             return 0;
     }
     }
